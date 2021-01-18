@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float x;
+    float y;
+    float answer;
+    printf("Введите цену за 1 кг конфет: ");
+    scanf("%e", &x);
+    y = x*0.1;
+    for (float i = 1; i<11; i++)
+    {
+    printf("Цена за %g кг конфет - %g \n", i*0.1, y*i);
+    }
+
+    return 0;
+}
