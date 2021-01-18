@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float n;
+    float a;
+    float answer = 0;
+    printf("Введите N: ");
+    scanf("%e", &n);
+    printf("Введите A: ");
+    scanf("%e", &a);
+    for (int i = 0; i<n+1; i+=1)
+    {
+    answer += pow(a,i);
+    }
+    printf("%g \n", answer);
+    return 0;
+}
