@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float n;
+    float y;
+    float answer = 1;
+    printf("Введите N: ");
+    scanf("%e", &n);
+    for (int i = 1; i<n+1; i++)
+    {
+    answer = answer * (1+0.1*i);
+    }
+    printf("%g", answer);
+    return 0;
+}
